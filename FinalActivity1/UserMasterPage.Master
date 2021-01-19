@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="UserMasterPage.master.cs" Inherits="FinalActivity1.UserMasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+     <style type="text/css">
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+     </style>
+</head>
+<body>
+    <form id="form1" runat="server">  
+            <asp:LinkButton runat="server" Id="linkHome" PostBackUrl="~/User_Pages/UserHomePage.aspx">Home</asp:LinkButton>
+            <asp:LinkButton runat="server" Id="linkOrder" PostBackUrl="~/User_Pages/OrderPage.aspx">Order</asp:LinkButton>
+            <asp:LinkButton runat="server" Id="linkHistory" PostBackUrl="~/User_Pages/OrderHistory.aspx">OrderHistory</asp:LinkButton>
+
+
+            <asp:LinkButton runat="server" Id="linkChangePassword" PostBackUrl="~/User_Pages/ChangePassword.aspx">Change Password</asp:LinkButton>
+            <asp:LinkButton runat="server" Id="btnLogout" OnClick="btnLogout_Click" Visible="false">Logout</asp:LinkButton>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>
